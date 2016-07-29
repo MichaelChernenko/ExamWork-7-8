@@ -1,6 +1,6 @@
-/*****************************************************
+/**************************************************************************************
 *								FONTS
-*****************************************************/
+**************************************************************************************/
 
 @font-face {
 	font-family: 'League Gothic';
@@ -22,9 +22,9 @@
 	font-style: normal;
 }
 
-/*****************************************************
-*								GLOBAL
-*****************************************************/
+/**************************************************************************************
+*								GENERAL
+**************************************************************************************/
 
 a {
 	text-decoration: none;
@@ -41,28 +41,25 @@ a {
 	clear: both;
 }
 
-/*****************************************************
+/**************************************************************************************
 *								HEADER
-*****************************************************/
-
-.top-line {
-	position: relative;
-	float: left;
-	background: url("../img/header-background.jpg") no-repeat center;
-	width: 100%;
-	background-size: cover;
-}
+**************************************************************************************/
 
 header {
-	padding-top: 68px;
+	background: url("../img/header-background.jpg") center center;
+	background-size: cover;
+	width: 100%;
+	padding-top: 70px;
+	padding-bottom: 60px;
 }
 
-/*****************************************************
+/**************************************************************************************
 *								HEADER LOGO
-*****************************************************/
+**************************************************************************************/
 
-.header__logo {
-	float: left;
+.header__logo,
+nav {
+	display: inline-block;
 }
 
 .header__logo__text {
@@ -78,21 +75,17 @@ header {
 	color: #44304d;
 }
 
-/*****************************************************
+/**************************************************************************************
 *								NAVIGATION
-*****************************************************/
+**************************************************************************************/
 
 nav {
-	padding-top: 3px;
+	float: right;
 }
 
-.nav__list {
-	float: left;
-	margin-left: 50px;
-}
-
-.nav__list--first {
-	margin-left: 172px;
+nav ul li {
+	margin-left: 52px;
+	display: inline-block;
 }
 
 .nav__link {
@@ -109,20 +102,17 @@ nav {
 	border-bottom: 2px solid  #edbfff;;
 }
 
-/*****************************************************
-*								SLIDER
-*****************************************************/
-
-.slider {
-	margin-top: 163px;
-	margin-bottom: 168px;
-	background: rgba(0, 0, 0, 0.2);
+.nav__submenu {
+	display: none;
 }
 
-.slider__text {
-	padding-top: 80px;
-	margin: 0 auto;
-	max-width: 960px;
+/**************************************************************************************
+*								SLIDER
+**************************************************************************************/
+
+.slider {
+	margin-top: 170px;
+	background: rgba(0, 0, 0, 0.2);
 }
 
 .slider__text__header {
@@ -132,15 +122,15 @@ nav {
 	font-family: 'League Gothic';
 }
 
+.slider__container {
+	float: left;
+	padding-top: 72px;
+}
+
 .slider__text__second {
 	font-size: 32px;
 	font-weight: 400;
 	color: #edbfff;
-}
-
-.slider__text__wrapper{
-	float: left;
-
 }
 
 .slider__text__main {
@@ -153,20 +143,24 @@ nav {
 	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-.slider__image {
-	float:right;
-	margin: -96px 68px -15px 0;
+.slider__image,
+.slider__container {
+	display: inline-block;
 }
 
-.slider__circle {
-	float: right;
-	margin-top: -75px;
-	margin-right: 360px;
+.slider__image {
+	margin-top: -21px;
+	margin-left: 68px;
 }
 
 .slider__circle li{
 	display: inline-block;
 	margin-left:2px;
+}
+
+.slider__circle {
+	margin-left: 67%;
+	margin-top: 72px
 }
 
 .slider__circle a {
@@ -185,17 +179,40 @@ a.slider__circle__current {
 	background: #fff;
 }
 
-/*****************************************************
+/**************************************************************************************
 *								ABOUT
-*****************************************************/
+**************************************************************************************/
 
 .about {
+	padding-top: 70px;
+	padding-bottom: 68px;
 	box-sizing: border-box;
 	border: 1px solid #33253a;
-	position: relative;
-	float: left;
 	background-image: linear-gradient(to top, #322539 0%, #745083 100%);
-	width: 100%;
+}
+
+.about__first,
+.about__second,
+.about__third {
+	display: inline-block;
+}
+
+.about__first {
+	margin-left: 50px;
+	margin-right: 85px;
+}
+
+.about__second {
+	margin-right: 80px;
+}
+
+.about__header {
+	color: white;
+	text-shadow: 0.5px 0.9px 0 #0f1518;
+	font-size: 30px;
+	font-family: 'League Gothic';
+	text-transform: uppercase;
+	padding-bottom: 7px;
 }
 
 .about__text {
@@ -211,103 +228,81 @@ a.slider__circle__current {
 	margin-bottom: 20px;
 }
 
-.about__first {
-	margin-left: 67px;
-	margin-right: 117px;
-}
-
-.about__first,
-.about__second,
-.about__third {
-	float: left;
-	margin-top: 76px;
-}
-
-.about__header {
-	color: white;
-	text-shadow: 0.5px 0.9px 0 #0f1518;
-	font-size: 30px;
-	font-family: 'League Gothic';
-	text-transform: uppercase;
-	padding-bottom: 7px;
-}
-
-.about__second {
-	margin-right: 107px;
-}
-
 .about__link {
-	float: right;
 	text-shadow: 0.5px 0.9px 0 #0f1518;
 	color: white;
 	font-size: 18px;
 	font-weight: 400;
 	font-family: 'League Gothic';
 	text-transform: uppercase;
-	margin-bottom: 70px;
 	padding-right: 5px;
+	margin-left: 160px;
 }
 
 .about__link:hover {
 	text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
 
-.about__first__icon {
-	position: absolute;
+.about__first__icon:before {
+	content: '';
+	display: inline-block;
 	background: url("../img/about-sprite.png");
 	width: 27px;
 	height: 27px;
-	margin-left: -52px;
-	top: 82px;
+	margin-right: 25px;
+	margin-left: -50px;
 }
 
-.about__second__icon {
-	position: absolute;
+.about__second__icon:before {
+	content: '';
+	display: inline-block;
 	background: url("../img/about-sprite.png");
 	background-position: -33px, 0;
 	width: 27px;
 	height: 27px;
-	margin-left: -53px;
-	top: 82px;
+	margin-right: 25px;
+	margin-left: -50px;
 }
 
-.about__third__icon {
-	position: absolute;
+.about__third__icon:before {
+	content: '';
+	display: inline-block;
 	background: url("../img/about-sprite.png");
 	background-position: -67px, 0;
 	width: 27px;
 	height: 27px;
-	margin-left: -43px;
-	top: 82px;
+	margin-right: 25px;
+	margin-left: -50px;
 }
 
-/*****************************************************
+/**************************************************************************************
 *								MAIN BLOCK
-*****************************************************/
+**************************************************************************************/
 
 .main-block {
 	position: relative;
-	float: left;
-	width: 100%;
 	background-color: #f9f9f9;
 	box-sizing: border-box;
 	border: 1px solid #e6e6e6;
+	float: left;
+	width: 100%;
 }
 
-/*****************************************************
+/**************************************************************************************
 *								MAIN BLOCK QOUTE
-*****************************************************/
+**************************************************************************************/
 
 .main-block__qoute {
+	float: left;
 	position: relative;
 	background-color: #fff;
-	float: left;
 	width: 388px;
-	height: 297px;
+	height: 275px;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 	padding-left: 38px;
-	margin-left: 28px;
-	margin-top: 75px;
+	margin-left: 27px;
+	margin-top: 99px;
+	margin-bottom: 115px;
 }
 
 .main-block__qoute__header {
@@ -317,11 +312,34 @@ a.slider__circle__current {
 	color: #454545;
 	text-transform: uppercase;
 	font-family: 'League Gothic';
+	margin-top: -22px;
 }
 
 .main-block__qoute__header--end {
 	color: #edbfff;
 }
+
+.main-block__qoute:before {
+	content: '';
+	display: inline-block;
+	background: url("../img/comment-avatar.png") no-repeat;
+	height: 51px;
+	width: 50px;
+	position: relative;
+	left:-63px;
+	top: 20px;
+}
+
+.main-block__qoute:after {
+	border: 10px solid transparent;
+	border-right: 10px solid #fff;
+	border-top: 10px solid #fff;
+	content: '';
+	left: 362px;
+	position: absolute;
+	top: 275px;
+}
+
 
 .main-block__qoute__text {
 	font-size: 16px;
@@ -335,35 +353,10 @@ a.slider__circle__current {
 	letter-spacing: -0.5px;
 }
 
-.main-block__qoute:before {
-	content: '';
-	display: inline-block;
-	background: url("../img/comment-avatar.png") no-repeat;
-	height: 51px;
-	width: 50px;
-	position: relative;
-	left:-63px;
-	top: 42px;
-}
-
-.main-block__qoute:after {
-	border: 10px solid transparent;
-	border-right: 10px solid #fff;
-	border-top: 10px solid #fff;
-	content: '';
-	left: 86%;
-	position: absolute;
-	top: 100%;
-}
-
-.wrapper__position{
-	position: relative;
-}
-
 .slider__circle--quote {
 	position: absolute;
-	top: 470px;
-	left: 198px;
+	top: 325px;
+	left: -511px;
 }
 
 .slider__circle--quote a {
@@ -374,15 +367,15 @@ a.slider__circle__current--quote {
 	background-image: linear-gradient(to top, #454545 0%, #6a6a6a 100%);
 }
 
-/*****************************************************
-*								MAIN BLOCK UPDATES
-*****************************************************/
+/**************************************************************************************
+*								MAIN BLOCK UPDATE
+**************************************************************************************/
 
 .main-block__updates {
 	position: relative;
 	float: left;
-	margin-top: 128px;
-	margin-left: 60px;
+	margin-top: 129px;
+	margin-left: 48px;
 }
 
 .main-block__updates__header {
@@ -400,7 +393,7 @@ a.slider__circle__current--quote {
 	color: #454545;
 	font-size: 16px;
 	font-family: 'Open Sans';
-	font-weight: bold;
+	font-weight: 700;
 	line-height: 24px;
 
 }
@@ -470,32 +463,93 @@ a.slider__circle__current--quote {
 	text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
 
-/*****************************************************
-*								LOGO BANNER
-*****************************************************/
-
-.clear-block {
-	clear:both;
+.main-block__updates__link--media {
+	display: none;
 }
+
+/**************************************************************************************
+*								LOGO BANNER
+**************************************************************************************/
 
 .logo-banner {
 	background-color: #f9f9f9;
-	width: 100%;
-	padding: 22px 0 32px;
 	box-sizing: border-box;
 	border-bottom: 1px solid #d8d8d8;
 }
 
-.logo-banner__image {
-	background-image: url("../img/logos.png");
-	width: 775px;
-	height: 65px;
-	margin: 0 auto;
+.logo-banner__hidden {
+	display: none;
 }
 
-/*****************************************************
-*								FOOTER
-*****************************************************/
+.logo-banner__image {
+	margin-top: 21px;
+	margin-bottom: 29px;
+	background-image: url("../img/logos.png");
+	margin-right: 61px;
+	margin-left: 98px;
+	width: 69px;
+	height: 63px;
+	display: inline-block;
+}
+
+.logo-banner__image--second{
+	margin-bottom: 29px;
+	background-image: url("../img/logos.png");
+	margin-right: 40px;
+	width: 69px;
+	height: 63px;
+	display: inline-block;
+	background-position: -135px 0;
+}
+
+.logo-banner__image--third {
+	margin-bottom: 29px;
+	background-image: url("../img/logos.png");
+	margin-right: 40px;
+	width: 69px;
+	height: 63px;
+	display: inline-block;
+	background-position: -268px 0;
+}
+
+.logo-banner__image--fourth {
+	margin-bottom: 29px;
+	background-image: url("../img/logos.png");
+	margin-right: 40px;
+	width: 69px;
+	height: 63px;
+	display: inline-block;
+	background-position: -404px 0;
+
+}
+
+.logo-banner__image--fifth {
+	margin-bottom: 29px;
+	background-image: url("../img/logos.png");
+	margin-right: 40px;
+	width: 113px;
+	height: 63px;
+	display: inline-block;
+	background-position: -518px 0;
+}
+
+.logo-banner__image--sixth {
+	margin-bottom: 29px;
+	background-image: url("../img/logos.png");
+	width: 76px;
+	height: 63px;
+	display: inline-block;
+	background-position: -699px 0;
+}
+
+/**************************************************************************************
+*								FOOTER 
+**************************************************************************************/
+
+/**************************************************************************************
+*								FOOTER INFO
+**************************************************************************************/
+
 .footer__info {
 	padding-top:95px;
 	background-color: #ececec;
@@ -507,6 +561,14 @@ a.slider__circle__current--quote {
 .footer__info__comments,
 .footer__info__categories {
 	float: left;
+}
+
+.header-style--media {
+	display: none;
+}
+
+.hidden-768--logo {
+	display: none;
 }
 
 .footer__info__logo__header {
@@ -522,6 +584,7 @@ a.slider__circle__current--quote {
 .footer__info__logo__header--end {
 	color: #b9b9b9;
 }
+
 
 .header-style {
 	text-shadow: 0.5px 0.9px 0 white;
@@ -557,20 +620,24 @@ a.slider__circle__current--quote {
 
 .footer__info__comments, 
 .footer__info__categories {
-	margin-left: 63px;
+	margin-left: 56px;
 }
 
-/*****************************************************
+/**************************************************************************************
 *								FOOTER MENU
-*****************************************************/
+**************************************************************************************/
 
 .footer__menu {
-	background: url("../img/footer-menu.png");
+	background: url("../img/footer-menu.png") center center;
 	background-size: cover;
-	float: left;
+	display: inline-block;
 	width: 100%;
 	padding-top: 36px;
 	height: 78px;
+}
+
+footer nav {
+	float: none;
 }
 
 .nav__link--footer {
@@ -582,11 +649,11 @@ a.slider__circle__current--quote {
 }
 
 .nav__list--footer {
-	margin-right: -6px;
+	margin-right: -13px;
 }
 
 .footer__menu__designed {
-	float: right;
+	display: inline-block;
 	text-shadow: 1px 1.7px 2px rgba(0, 0, 0, 0.4);
 	color: white;
 	font-size: 12px;
@@ -594,6 +661,7 @@ a.slider__circle__current--quote {
 	font-weight: 300;
 	font-family: 'Open Sans';
 	margin-top: 5px;
+	float: right;
 }
 
 .footer__menu__designed--end {

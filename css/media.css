@@ -28,7 +28,7 @@ header {
 nav {
 	float: none;
 	display: block;
-	margin-left: -49px;
+	margin-left: -39px;
 	margin-top: 24px;
 	margin-bottom: -97px;
 }
@@ -86,14 +86,13 @@ nav {
 
 .about__header {
 	font-size: 24px;
-	margin-left: -5px;
 }
 
 .about__second__icon:before,
 .about__third__icon:before {
 	content: '';
 	display: inline-block;
-	background: url("../img/about-sprite.png");
+	
 	width: 27px;
 	height: 27px;
 }
@@ -101,6 +100,15 @@ nav {
 .about__text {
 	width: 160px;
 	margin-bottom: 28px;
+}
+
+.about__icon {
+	top: 880px;
+}
+
+.about__icon--second,
+.about__icon--third {
+	background: url("../img/about-sprite.png");
 }
 
 .about__link {
@@ -298,7 +306,7 @@ nav {
 
 .nav__submenu:hover {
 	background-color: #2b2231;
-	border-bottom: 2px solid #fff;
+	border-bottom: 2px solid #edc1fc;
 }
 
 .nav__link:hover {
@@ -378,9 +386,27 @@ nav {
 	margin-top: 31px;
 }
 
-.about__header{
+legend {
 	text-align: center;
-	padding-right: 222px;
+}
+
+.about__icon {
+	margin-left: -264px;
+	top: 610px;
+}
+
+.about__icon--second {
+	top: 760px;
+	background-position: -33px, 0;
+}
+
+.about__icon--third {
+	top: 917px;
+	background-position: -67px, 0;
+}
+
+.about__header {
+	margin-left: -220px;
 }
 
 .about__link {
@@ -530,6 +556,10 @@ nav {
 	margin-left: 35px;
 }
 
+.nav__list--footer {
+	margin-right: -24px;
+}
+
 .nav__list--first--footer {
 	margin-left: 0;
 }
@@ -593,7 +623,20 @@ nav {
 
 .about__header {
 	padding: 0;
-	margin-left: -60px;
+	margin-left: -50px;
+}
+
+.about__icon {
+	margin-left: -96px;
+	top: 570px;
+}
+
+.about__icon--second {
+	top: 724px;
+}
+
+.about__icon--third {
+	top: 883px;
 }
 
 .about__link {

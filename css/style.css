@@ -83,8 +83,12 @@ nav {
 	float: right;
 }
 
+nav a {
+	padding: 0 5px;
+}
+
 nav ul li {
-	margin-left: 52px;
+	margin-left: 35px;
 	display: inline-block;
 }
 
@@ -198,15 +202,16 @@ a.slider__circle__current {
 }
 
 .about__first {
-	margin-left: 50px;
+	margin-left: 48px;
 	margin-right: 85px;
 }
 
 .about__second {
-	margin-right: 80px;
+	margin-right: 90px;
 }
 
 .about__header {
+	display: inline-block;
 	color: white;
 	text-shadow: 0.5px 0.9px 0 #0f1518;
 	font-size: 30px;
@@ -219,7 +224,7 @@ a.slider__circle__current {
 	width: 223px;
 	height: 120px;
 	text-shadow: 0.5px 0.9px 0 #0f1518;
-	color: #aea9b1;
+	color: #fff6ff;
 	font-size: 16px;
 	font-weight: 300;
 	font-family: 'Open Sans';
@@ -243,37 +248,25 @@ a.slider__circle__current {
 	text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
 
-.about__first__icon:before {
-	content: '';
+.about__icon {
 	display: inline-block;
 	background: url("../img/about-sprite.png");
 	width: 27px;
 	height: 27px;
-	margin-right: 25px;
+	margin-right: 19px;
 	margin-left: -50px;
+	position: absolute;
+	top: 930px;
 }
 
-.about__second__icon:before {
-	content: '';
-	display: inline-block;
-	background: url("../img/about-sprite.png");
+.about__icon--second {
 	background-position: -33px, 0;
-	width: 27px;
-	height: 27px;
-	margin-right: 25px;
-	margin-left: -50px;
 }
 
-.about__third__icon:before {
-	content: '';
-	display: inline-block;
-	background: url("../img/about-sprite.png");
+.about__icon--third {
 	background-position: -67px, 0;
-	width: 27px;
-	height: 27px;
-	margin-right: 25px;
-	margin-left: -50px;
 }
+
 
 /**************************************************************************************
 *								MAIN BLOCK
